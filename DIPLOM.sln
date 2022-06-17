@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIPLOM.API", "DIPLOM.API\DIPLOM.API.csproj", "{6B41AC8B-1879-4D49-9D24-C0F1C4F3EF73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIPLOM.Domain", "DIPLOM.Domain\DIPLOM.Domain.csproj", "{48A321B8-1894-412C-8650-AB6C0ADFDFDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIPLOM.Infrastructure", "DIPLOM.Infrastructure\DIPLOM.Infrastructure.csproj", "{88421B7A-8FFC-40A2-BE21-71FCE09005F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6B41AC8B-1879-4D49-9D24-C0F1C4F3EF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B41AC8B-1879-4D49-9D24-C0F1C4F3EF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B41AC8B-1879-4D49-9D24-C0F1C4F3EF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A321B8-1894-412C-8650-AB6C0ADFDFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A321B8-1894-412C-8650-AB6C0ADFDFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A321B8-1894-412C-8650-AB6C0ADFDFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A321B8-1894-412C-8650-AB6C0ADFDFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88421B7A-8FFC-40A2-BE21-71FCE09005F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88421B7A-8FFC-40A2-BE21-71FCE09005F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88421B7A-8FFC-40A2-BE21-71FCE09005F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88421B7A-8FFC-40A2-BE21-71FCE09005F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
