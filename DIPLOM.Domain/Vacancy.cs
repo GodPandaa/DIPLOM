@@ -10,9 +10,9 @@ namespace DIPLOM.Domain
     {
         public Guid Id { get; set; }
 
-        public int Wages { get; set; }
+        public int Wages { get; set; } // зарплата
 
-        public string Post { get; set; }
+        public string Post  { get; set; } //должность
 
         public Contract Contract { get; set; }
     }
