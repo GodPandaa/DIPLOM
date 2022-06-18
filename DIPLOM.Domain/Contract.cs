@@ -14,15 +14,15 @@ namespace DIPLOM.Domain
 
         public Vacancy Vacancy { get; set; }
 
-        public Vacancy Vacancyid { get; set; }
+        public Vacancy VacancyId { get; set; }
 
         public Employer Employer { get; set; }
 
-        public Employer Employerid { get; set; }
+        public Employer EmployerId { get; set; }
 
         public Customer Customer { get; set; }
 
-        public Customer Customerid { get; set; }
+        public Customer CustomerId { get; set; }
 
 
 

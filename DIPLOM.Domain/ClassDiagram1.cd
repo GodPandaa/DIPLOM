@@ -6,6 +6,11 @@
       <HashCode>AAEGAAAAAAAAAAAACAQAAAAAEAAAABAAQAAAAAAAAAA=</HashCode>
       <FileName>Contract.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Customer" />
+      <Property Name="Vacancy" />
+      <Property Name="Employer" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Customer">
     <Position X="6.5" Y="4.5" Width="1.5" />
@@ -13,20 +18,29 @@
       <HashCode>AAACACAAAAAAAAAIAAAAAAQABAAAAAAAAAAoAAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Contracts" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Employer">
-    <Position X="4" Y="2.25" Width="1.5" />
+    <Position X="13" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIBAAAAAA=</HashCode>
       <FileName>Employer.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Contracts" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Vacancy">
-    <Position X="1.75" Y="2" Width="1.5" />
+    <Position X="4.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAQAA=</HashCode>
       <FileName>Vacancy.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Contracts" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
