@@ -22,6 +22,6 @@ namespace DIPLOM.Domain
 
         public string Education { get; set; }
 
-        public List<Contract> Contracts { get; set; }
+        public Contract Contract { get; set; }
     }
 }

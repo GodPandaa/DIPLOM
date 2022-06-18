@@ -1,46 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DIPLOM.Domain.Contract">
-    <Position X="8.5" Y="1.75" Width="1.5" />
+    <Position X="8" Y="0.75" Width="1.5" />
+    <AssociationLine Name="Vacancies" Type="DIPLOM.Domain.Vacancy" FixedToPoint="true">
+      <Path>
+        <Point X="8.312" Y="2.623" />
+        <Point X="8.312" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Employers" Type="DIPLOM.Domain.Employer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.5" Y="1.686" />
+        <Point X="14.062" Y="1.686" />
+        <Point X="14.062" Y="4.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEGAAAAAAAAAAAACAQAAAAAEAAAABAAQAAAAAAAAAA=</HashCode>
+      <HashCode>QAEGAAAAAAAAAAAAAAQAAAAAEAAAABAAAAAABAAAAAA=</HashCode>
       <FileName>Contract.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Customer" />
-      <Property Name="Vacancy" />
-      <Property Name="Employer" />
-    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Vacancies" />
+      <Property Name="Employers" />
+      <Property Name="Customers" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Customer">
-    <Position X="6.5" Y="4.5" Width="1.5" />
+    <Position X="3.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACACAAAAAAAAAIAAAAAAQABAAAAAAAAAAoAAAAAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Contracts" />
-    </ShowAsCollectionAssociation>
+    <ShowAsAssociation>
+      <Property Name="Contract" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Employer">
-    <Position X="13" Y="2.25" Width="1.5" />
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Contract" Type="DIPLOM.Domain.Contract" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.938" Y="4.5" />
+        <Point X="12.938" Y="2.186" />
+        <Point X="9.5" Y="2.186" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAIBAAAAAA=</HashCode>
       <FileName>Employer.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Contracts" />
-    </ShowAsCollectionAssociation>
+    <ShowAsAssociation>
+      <Property Name="Contract" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="DIPLOM.Domain.Vacancy">
-    <Position X="4.25" Y="2.25" Width="1.5" />
+    <Position X="8" Y="4.75" Width="1.5" />
+    <AssociationLine Name="Contract" Type="DIPLOM.Domain.Contract" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="4.75" />
+        <Point X="9.25" Y="2.623" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAQAA=</HashCode>
       <FileName>Vacancy.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="Contracts" />
-    </ShowAsCollectionAssociation>
+    <ShowAsAssociation>
+      <Property Name="Contract" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

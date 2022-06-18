@@ -23,8 +23,9 @@ namespace DIPLOM.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Vacancy>().HasOne(v => v. )
+            modelBuilder.Entity<Vacancy>().HasOne(v => v.Contract).WithMany(c => c.Vacancies);
+            modelBuilder.Entity<Customer>().HasOne(c => c.Contract).WithMany(c => c.Customers);
+            modelBuilder.Entity<Employer>().HasOne(e => e.Contract).WithMany(c => c.Employers);
         }
-
     }
 }
