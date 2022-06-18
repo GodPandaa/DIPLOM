@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DIPLOM.Infrastructure.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220618090433_init")]
+    [Migration("20220618092147_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,22 +30,16 @@ namespace DIPLOM.Infrastructure.Migrations
                     b.Property<int>("Contract_percentage")
                         .HasColumnType("integer");
 
-                    b.Property<Guid?>("CustomerIdId")
+                    b.Property<Guid>("CustomerId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("EmployerIdId")
+                    b.Property<Guid>("EmployerId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("VacancyIdId")
+                    b.Property<Guid>("VacancyId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CustomerIdId");
-
-                    b.HasIndex("EmployerIdId");
-
-                    b.HasIndex("VacancyIdId");
 
                     b.ToTable("Contracts");
                 });
@@ -126,27 +120,6 @@ namespace DIPLOM.Infrastructure.Migrations
                     b.HasIndex("ContractId");
 
                     b.ToTable("Vacancies");
-                });
-
-            modelBuilder.Entity("DIPLOM.Domain.Contract", b =>
-                {
-                    b.HasOne("DIPLOM.Domain.Customer", "CustomerId")
-                        .WithMany()
-                        .HasForeignKey("CustomerIdId");
-
-                    b.HasOne("DIPLOM.Domain.Employer", "EmployerId")
-                        .WithMany()
-                        .HasForeignKey("EmployerIdId");
-
-                    b.HasOne("DIPLOM.Domain.Vacancy", "VacancyId")
-                        .WithMany()
-                        .HasForeignKey("VacancyIdId");
-
-                    b.Navigation("CustomerId");
-
-                    b.Navigation("EmployerId");
-
-                    b.Navigation("VacancyId");
                 });
 
             modelBuilder.Entity("DIPLOM.Domain.Customer", b =>

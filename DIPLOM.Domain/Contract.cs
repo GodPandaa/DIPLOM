@@ -12,13 +12,13 @@ namespace DIPLOM.Domain
 
         public int Contract_percentage { get; set; }
 
-        public Vacancy VacancyId { get; set; }
+        public Guid VacancyId { get; set; }
         public List<Vacancy> Vacancies { get; set; }
 
-        public Employer EmployerId { get; set; }
+        public Guid EmployerId { get; set; }
         public List<Employer> Employers { get; set; }
 
-        public Customer CustomerId { get; set; }
+        public Guid CustomerId { get; set; }
         public List<Customer> Customers { get; set; }
 
         
