@@ -3,15 +3,17 @@ using System;
 using DIPLOM.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DIPLOM.Infrastructure.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20220619111022_19062022T1410")]
+    partial class _19062022T1410
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,17 +102,11 @@ namespace DIPLOM.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<bool>("Active")
-                        .HasColumnType("boolean");
-
                     b.Property<Guid?>("EmployerId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Post")
                         .HasColumnType("text");
-
-                    b.Property<DateTime>("PublishDate")
-                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("Wages")
                         .HasColumnType("integer");

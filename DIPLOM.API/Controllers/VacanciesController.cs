@@ -42,6 +42,20 @@ namespace DIPLOM.API.Controllers
             return vacancy;
         }
 
+        // GET: api/Vacancies/last/3
+        [HttpGet("last/{num}")]
+        public async Task<ActionResult<IEnumerable<Vacancy>>> GetLastVacancy(int num)
+        {
+            var vacancies = await _context.Vacancies.OrderByDescending(v => v.PublishDate).Take(num).ToListAsync();
+
+            if (vacancies == null)
+            {
+                return NotFound();
+            }
+
+            return vacancies;
+        }
+
         // PUT: api/Vacancies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

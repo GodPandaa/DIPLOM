@@ -14,6 +14,8 @@ namespace DIPLOM.Domain
 
         public string Company { get; set; }
 
-        public Contract Contract { get; set; }
+        public List<Contract> Contracts { get; set; }
+
+        public List<Vacancy> Vacancies { get; set; }
     }
 }

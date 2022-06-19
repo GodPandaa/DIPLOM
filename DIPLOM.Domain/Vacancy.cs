@@ -14,6 +14,10 @@ namespace DIPLOM.Domain
 
         public string Post  { get; set; } //должность
 
-        public Contract Contract { get; set; }
+        public DateTime PublishDate { get; set; } = DateTime.Now; // День опубликования вакансии
+
+        public bool Active { get; set; } // Статус вакансии
+
+        //public List<Contract> Contracts { get; set; }
     }
 }
